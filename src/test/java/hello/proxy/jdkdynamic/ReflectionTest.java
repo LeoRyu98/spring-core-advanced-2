@@ -55,6 +55,12 @@ public class ReflectionTest {
         dynamicCall(methodCallB, target);
     }
 
+    /**
+     * 공통 로직1, 공통 로직2를 한 번에 처리할 수 있는 통합된 공통 처리 로직
+     * @param method 호출할 메서드 정보를 동적으로 제공
+     * @param target 실제 실행할 인스턴스 정보
+     * @throws Exception method.invoke(target)를 사용할 때 호출할 클래스와 메서드 정보가 다르면 예외 발생
+     */
     private void dynamicCall(Method method, Object target) throws Exception{
         log.info("start");
         Object result = method.invoke(target);
@@ -73,5 +79,4 @@ public class ReflectionTest {
             return "B";
         }
     }
-
 }

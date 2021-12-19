@@ -14,7 +14,8 @@ public class JdkDynamicProxyTest {
         AInterface target = new AImpl();
         TimeInvocationHandler handler = new TimeInvocationHandler(target); // 동적 프록시에 적용할 핸들러 로직
 
-        AInterface proxy = (AInterface) Proxy.newProxyInstance(AInterface.class.getClassLoader(), new Class[]{AInterface.class}, handler);
+        AInterface proxy = (AInterface) Proxy.newProxyInstance(AInterface.class.getClassLoader(),
+                new Class[]{AInterface.class}, handler);
 
         proxy.call();
         log.info("targetClass={}", target.getClass());
