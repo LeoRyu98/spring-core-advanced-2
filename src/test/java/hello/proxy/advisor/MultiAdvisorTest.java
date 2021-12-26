@@ -43,8 +43,10 @@ public class MultiAdvisorTest {
         // client -> proxy -> advisor2 -> advisor1 -> target
         // Pointcut.TRUE 설정으로 해당 테스트에서는 필터링을 하지 않음
 
-        DefaultPointcutAdvisor advisor1 = new DefaultPointcutAdvisor(Pointcut.TRUE, new Advice1());
-        DefaultPointcutAdvisor advisor2 = new DefaultPointcutAdvisor(Pointcut.TRUE, new Advice2());
+        DefaultPointcutAdvisor advisor1 =
+                new DefaultPointcutAdvisor(Pointcut.TRUE, new Advice1());
+        DefaultPointcutAdvisor advisor2 =
+                new DefaultPointcutAdvisor(Pointcut.TRUE, new Advice2());
 
         // 프록시 생성
         ServiceInterface target = new ServiceImpl();

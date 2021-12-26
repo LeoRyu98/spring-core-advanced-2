@@ -22,7 +22,8 @@ public class AdvisorTest {
     public void advisorTest1() throws Exception {
         ServiceInterface target = new ServiceImpl();
         ProxyFactory proxyFactory = new ProxyFactory(target);
-        DefaultPointcutAdvisor advisor = new DefaultPointcutAdvisor(Pointcut.TRUE, new TimeAdvice());
+        DefaultPointcutAdvisor advisor =
+                new DefaultPointcutAdvisor(Pointcut.TRUE, new TimeAdvice());
         proxyFactory.addAdvisor(advisor);
         ServiceInterface proxy = (ServiceInterface) proxyFactory.getProxy();
 
