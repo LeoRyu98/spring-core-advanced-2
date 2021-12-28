@@ -7,6 +7,7 @@ import hello.proxy.cofig.v2_dynamicproxy.DynamicProxyFilterConfig;
 import hello.proxy.cofig.v3_proxyfactory.ProxyFactoryConfigV1;
 import hello.proxy.cofig.v3_proxyfactory.ProxyFactoryConfigV2;
 import hello.proxy.cofig.v4_postprocessor.BeanPostProcessorConfig;
+import hello.proxy.cofig.v5_autoproxy.AutoProxyConfig;
 import hello.proxy.trace.logtrace.LogTrace;
 import hello.proxy.trace.logtrace.ThreadLocalLogTrace;
 import org.springframework.boot.SpringApplication;
@@ -20,7 +21,8 @@ import org.springframework.context.annotation.Import;
 //@Import({ConcreteProxyConfig.class})
 //@Import({DynamicProxyFilterConfig.class})
 //@Import({ProxyFactoryConfigV2.class})
-@Import({BeanPostProcessorConfig.class})
+//@Import({BeanPostProcessorConfig.class})
+@Import({AutoProxyConfig.class})
 @SpringBootApplication(scanBasePackages = "hello.proxy.app") //hello.proxy.app package 만 컴포넌트 스캔의 대상이 된다.
 // Config 파일을 따로 @Import 를 통해서 스프링 빈으로 등록한 이유는 계속 다른 예제를 만들면서 Config 파일을 바꿔서 등록하기 위함
 public class ProxyApplication {
