@@ -1,5 +1,5 @@
 # spring-core-advanced-2
-<b>Design Pattern, Spring AOP</b>
+<b>Design Pattern, Proxy</b>
 ## contents
 - 프록시 패턴과 데코레이터 패턴
 - 동적 프록시 기술(JDK 동적 프록시, CGLIB) 적용
